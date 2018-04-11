@@ -99,9 +99,10 @@ function filterRules( ) {
     var rulesInAuditList = Object.keys( rulesInAudit );
 
     for (var i = 0; i < rulesInAuditList.length; i++) {
-        var rule = rulesInAudit[rulesInAuditList[i]];
+        var ruleSlug = rulesInAuditList[i];
+        var rule = rulesInAudit[ruleSlug];
 
-        elRulesInAudit.innerHTML += '<li>Violation of ' + rule.href + ' is a <strong>failure for ' + formatAuditItemNumber(rule.auditItemNumber) + ' </strong></li>';
+        elRulesInAudit.innerHTML += '<li>Violation of "' + ruleSlug + '" rule: ' + rule.href + ' is a <strong>failure for ' + formatAuditItemNumber(rule.auditItemNumber) + ' </strong></li>';
     }
 
 }
