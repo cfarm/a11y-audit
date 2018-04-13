@@ -1,29 +1,156 @@
 var rulesInAudit = {
-    'aria-allowed-attr': { auditItemNumber: ['A1'] },
-    'aria-roles': { auditItemNumber: ['A1'] },
-    'aria-valid-attr': { auditItemNumber: ['A1'] },
-    'aria-valid-attr-value': { auditItemNumber: ['A1'] },
-    'audio-caption': { auditItemNumber: ['B2', 'B6'] },
-    'button-name': { auditItemNumber: ['A6'] },
-    'bypass': { auditItemNumber: ['A12', 'B5', 'C4'] },
-    'color-contrast': { auditItemNumber: ['A15', 'E1'] },
-    'document-title': { auditItemNumber: ['A4'] },
-    'duplicate-id': { auditItemNumber: ['A1'] },
-    'frame-title': { auditItemNumber: ['E9'] },
-    // 'heading-order': { auditItemNumber: ['A14'] }, // doesn't report accurately
-    'html-has-lang': { auditItemNumber: ['A5'] },
-    'html-lang-valid': { auditItemNumber: ['A1', 'A5'] },
-    'image-alt': { auditItemNumber: ['A10','B2','B6'] },
-    'label': { auditItemNumber: ['A2'] },
-    'link-in-text-block': { auditItemNumber: ['E2'] },
-    'meta-viewport': { auditItemNumber: ['D3'] },
-    'meta-viewport-large': { auditItemNumber: ['D3'] },
-    'object-alt': { auditItemNumber: ['B2','B6'] },
-    // 'page-has-heading-one': { auditItemNumber: ['A7'] }, // doesn't report accurately
-    // 'skip-link': { auditItemNumber: ['A12', 'B5'] }, // doesn't report accurately
-    'valid-lang': { auditItemNumber: ['A1'] },
-    'video-caption': { auditItemNumber: ['B2', 'B6'] },
-    'video-description': { auditItemNumber: ['B2', 'B6'] }
+    'aria-allowed-attr': { 
+        auditItemNumber: ['A1', 'B7'],
+        replacesManualTest: false 
+    },
+    'aria-required-attr': { 
+        auditItemNumber: ['A1', 'B7'],
+        replacesManualTest: false 
+    },
+    'aria-required-children': { 
+        auditItemNumber: ['A1', 'B7'],
+        replacesManualTest: false 
+    },
+    'aria-required-parent': { 
+        auditItemNumber: ['A1', 'B7'],
+        replacesManualTest: false 
+    },
+    'aria-roles': { 
+        auditItemNumber: ['A1'],
+        replacesManualTest: false 
+    },
+    'aria-valid-attr': { 
+        auditItemNumber: ['A1'],
+        replacesManualTest: false 
+    },
+    'aria-valid-attr-value': { 
+        auditItemNumber: ['A1'],
+        replacesManualTest: false 
+    },
+    'audio-caption': { 
+        auditItemNumber: ['B2', 'B6'],
+        replacesManualTest: false 
+    },
+    'button-name': { 
+        auditItemNumber: ['A6'],
+        replacesManualTest: false 
+    },
+    'bypass': { 
+        auditItemNumber: ['A12', 'B5', 'C4'],
+        replacesManualTest: false 
+    },
+    'color-contrast': { 
+        auditItemNumber: ['A15', 'E1'],
+        replacesManualTest: false 
+    },
+    'definition-list': { 
+        auditItemNumber: ['A1', 'B7'],
+        replacesManualTest: false 
+    },
+    'dlitem': { 
+        auditItemNumber: ['A1', 'B7'],
+        replacesManualTest: false 
+    },
+    'document-title': { 
+        auditItemNumber: ['A4'],
+        replacesManualTest: false 
+    },
+    'duplicate-id': { 
+        auditItemNumber: ['A1'],
+        replacesManualTest: false 
+    },
+    'frame-title': { 
+        auditItemNumber: ['E9'],
+        replacesManualTest: false 
+    },
+    // 'heading-order': { 
+    // auditItemNumber: ['A14'] }, // doesn't report accurately
+    // }
+    'html-has-lang': { 
+        auditItemNumber: ['A5'],
+        replacesManualTest: false 
+    },
+    'html-lang-valid': { 
+        auditItemNumber: ['A1', 'A5'],
+        replacesManualTest: false 
+    },
+    'image-alt': { 
+        auditItemNumber: ['A10','B2','B6'],
+        replacesManualTest: false 
+    },
+    'input-image-alt': { 
+        auditItemNumber: ['B2'],
+        replacesManualTest: false 
+    },
+    'label': { 
+        auditItemNumber: ['A2'],
+        replacesManualTest: false 
+    },
+    'link-in-text-block': { 
+        auditItemNumber: ['E2'],
+        replacesManualTest: false 
+    },
+    'link-name': { 
+        auditItemNumber: ['B1', 'C1'],
+        replacesManualTest: false 
+    }, 
+    'list': { 
+        auditItemNumber: ['A1', 'B3', 'B7'],
+        replacesManualTest: false 
+    }, 
+    'listitem': { 
+        auditItemNumber: ['A1', 'B3', 'B7'],
+        replacesManualTest: false 
+    },     
+    'meta-viewport': { 
+        auditItemNumber: ['D3'],
+        replacesManualTest: false 
+    },
+    'meta-viewport-large': { 
+        auditItemNumber: ['D3'],
+        replacesManualTest: false 
+    },
+    'object-alt': { 
+        auditItemNumber: ['B2','B6'],
+        replacesManualTest: false 
+    },
+    // 'page-has-heading-one': { 
+    // auditItemNumber: ['A7'] }, // doesn't report accurately
+    'p-as-heading': { 
+        auditItemNumber: ['B1', 'B3', 'B7', 'B9'],
+        replacesManualTest: false 
+    }, 
+    // 'skip-link': { 
+    // auditItemNumber: ['A12', 'B5'] }, // doesn't report accurately
+
+    'table-fake-caption': { 
+        auditItemNumber: ['B1', 'B3', 'B7'],
+        replacesManualTest: false 
+    }, 
+    'td-has-header': { 
+        auditItemNumber: ['A1', 'B1', 'B3', 'B7'],
+        replacesManualTest: false 
+    }, 
+    'td-headers-attr': { 
+        auditItemNumber: ['A1', 'B1', 'B3', 'B7'],
+        replacesManualTest: false 
+    }, 
+    'th-has-data-cells': { 
+        auditItemNumber: ['B1', 'B3', 'B7'],
+        replacesManualTest: false 
+    }, 
+    'valid-lang': { 
+        auditItemNumber: ['A1'],
+        replacesManualTest: false 
+    },
+    'video-caption': { 
+        auditItemNumber: ['B2', 'B6'],
+        replacesManualTest: false 
+    },
+    'video-description': { 
+        auditItemNumber: ['B2', 'B6'],
+        replacesManualTest: false 
+    }
 };
 
 var elRulesInAudit = document.getElementById('rules-in-audit');
