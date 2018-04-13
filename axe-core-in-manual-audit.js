@@ -1,4 +1,5 @@
 var rulesInAudit = {
+    'aria-allowed-attr': { auditItemNumber: ['A1'] },
     'aria-roles': { auditItemNumber: ['A1'] },
     'aria-valid-attr': { auditItemNumber: ['A1'] },
     'aria-valid-attr-value': { auditItemNumber: ['A1'] },
