@@ -8,6 +8,7 @@ var rulesInAudit = {
     'bypass': { auditItemNumber: ['A12', 'B5', 'C4'] },
     'color-contrast': { auditItemNumber: ['A15', 'E1'] },
     'document-title': { auditItemNumber: ['A4'] },
+    'duplicate-id': { auditItemNumber: ['A1'] },
     'frame-title': { auditItemNumber: ['E9'] },
     // 'heading-order': { auditItemNumber: ['A14'] }, // doesn't report accurately
     'html-has-lang': { auditItemNumber: ['A5'] },
